@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+<head>	
+<meta charset="utf-8">
+<title>Pagina Web</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<link href="estilos.css" rel="stylesheet" type="text/css">
+	<link href="Contenido/estiloscontenido.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+	<div class="cabecera" id="cabecera">	
+		<h1>Computer Home</h1>
+		<h3> Tu tienda de confianza</h3>
+	</div>
+
+	<div class="contacto" id="contacto">
+	
+	  <div class="contacto1" id="contacto1">
+  	  		<img class ="icono" src="Imagenes/Whatsapp.png"  alt=""/>
+		  	<div class="contacto2">
+		  	+51 987 654 321
+		    </div>
+	  </div>
+		
+	  <div class="contacto1" id="contacto2">
+		<img class ="icono" src="Imagenes/email.png" alt=""/>
+		  <div class="contacto21">
+		  	computerhome@gmail.com
+	    </div>
+	  </div>
+	  <div class="contacto1" id="contacto3">
+		<img class ="icono" src="Imagenes/instagram.png" alt=""/>
+<div class="contacto22">
+  	  ComputerHome
+  </div>
+	  </div>
+</div>
+	<div class="centro" id="centro">
+	  <div class="menu marg1" id="menu">
+	  	
+		  <ul>
+			<li><a href="#" id="almacenamiento">Unidades de Almacenamiento</a></li>
+			<li><a href="#" id="placamadre">Placa Madre</a></li>
+			<li><a href="#" id="procesadores">Procesadores</a></li>
+			<li><a href="#" id="tarjetasdevideo">Tarjetas de video</a></li>
+			<li><a href="#" id="memoriaram">Memoria RAM</a></li>
+			<li><a href="#" id="mouseyteclado">Mouse y Teclado</a></li>
+			<li><a href="#" id="monitores">Monitores</a></li>
+			<li><a href="#" id="case">Case</a></li>
+			<li><a href="#" id="fuentedepoder">Fuente de Poder</a></li>
+		  </ul>
+		
+      </div>
+	  <div class="contenido_principal marg1" id="contenido_principal">
+		<div class="textopromocion">
+			<h1>
+				Algunos de nuestros productos:
+			</h1>
+		</div>
+
+		<div class="fondo" id="fondo">
+			
+			<div class="slot" id="slot">
+				<div class="slotimg" id="slot4img">
+					<img class="producto" src="Imagenes/almacenamiento/disco-solido-ssd-gigabyte-240-gb-gp-gstfs31240gntd.jpg" width="250" height="250" alt=""/> 
+				</div>
+				  <div class="slottxt" id="slot4txt">SOLIDO SSD GIGABYTE 240GB (GP-GSTFS31240GNTD) S/. 107</div>
+			  </div>
+			
+			 <div class="slot" id="slot2">
+				<div class="slotimg" >
+					<img class="producto" src="Imagenes/case/case-halion-storm-7223-350w-real-usb-30-rojo.jpg" width="250" height="250" alt=""/> 
+				</div>
+			  <div class="slottxt" >CASE HALION STORM (7223 RED) 350W | LED-ROJO S/.161</div> 
+			</div>
+			
+			<div class="slot" id="slot3">
+				<div class="slotimg" >
+					<img class="producto" src="Imagenes/memoriaram/memoria-ram-kingston-16gb2666mhz-ddr4-fury-beast-kf426c16bb16-negro.jpg" width="250" height="250" alt=""/> </div>
+					  <div class="slottxt" >MEMORIA RAM KINGSTON 16GB/2666MHZ DDR4 FURY BEAST ( KF426C16BB/16 ) | NEGRO S/.303</div>
+			</div>
+			
+			<div class="slot" id="slot4">
+				<div class="slotimg" id="slot4img">
+					<img class="producto" src="Imagenes/mouseyteclado/mouse-razer-viper-mini-gaming-rgb-8500dpi.jpg" width="250" height="250" alt=""/> 
+				</div>
+				  <div class="slottxt" id="slot4txt">MOUSE RAZER VIPER MINI GAMING RGB 8500DPI S/. 154</div>
+			</div>
+		</div>
+
+	  </div>
+    </div>
+	
+<div class="pie_de_pagina" id="pie_de_pagina">Elaborado por: Juan Sánchez
+
+	</div>
+<!--
+/*<main class="contenedor_principal">
+  <header class="cabezera">"Cabezera"</header>
+  	<nav class="contacto">"contacto"</nav>
+  	<aside class="menu_lateral">"menu_lateral"</aside>
+  	<section class="publicacion">"publicacion"</section>
+  	<footer class="pie_de_pagina">"pie_de_pagina"</footer>
+</main>-->
+	<script>
+		var eventos;
+		$('#almacenamiento').click(function(){
+			$.ajax({
+					url: "Contenido/Almacenamiento.html",
+					type: "post",
+					//data: $("#formdatoprincipal").serialize(),
+					success:  function (response) { //una vez que el archivo recibe el request lo procesa y lo devuelve
+                        $("#contenido_principal").html(response);
+                }
+			}); 
+			$('#centro').css('height', '750px');
+		});
+
+		var eventos;
+		$('#placamadre').click(function(){
+			$.ajax({
+					url: "Contenido/PlacaMadre.html",
+					type: "post",
+					//data: $("#formdatoprincipal").serialize(),
+					success:  function (response) { //una vez que el archivo recibe el request lo procesa y lo devuelve
+                        $("#contenido_principal").html(response);
+                }
+			});
+			$('#centro').css('height', '750px');
+		});
+
+		var eventos;
+		$('#procesadores').click(function(){
+			$.ajax({
+					url: "Contenido/Procesadores.html",
+					type: "post",
+					//data: $("#formdatoprincipal").serialize(),
+					success:  function (response) { //una vez que el archivo recibe el request lo procesa y lo devuelve
+                        $("#contenido_principal").html(response);
+                }
+			});
+			$('#centro').css('height', '750px');
+		});
+
+		var eventos;
+		$('#tarjetasdevideo').click(function(){
+			$.ajax({
+					url: "Contenido/TarjetasDeVideo.html",
+					type: "post",
+					//data: $("#formdatoprincipal").serialize(),
+					success:  function (response) { //una vez que el archivo recibe el request lo procesa y lo devuelve
+                        $("#contenido_principal").html(response);
+                }
+			});
+			$('#centro').css('height', '750px');
+		});
+
+		var eventos;
+		$('#memoriaram').click(function(){
+			$.ajax({
+					url: "Contenido/MemoriaRAM.html",
+					type: "post",
+					//data: $("#formdatoprincipal").serialize(),
+					success:  function (response) { //una vez que el archivo recibe el request lo procesa y lo devuelve
+                        $("#contenido_principal").html(response);
+                }
+			});
+			$('#centro').css('height', '750px');
+		});
+
+		var eventos;
+		$('#mouseyteclado').click(function(){
+			$.ajax({
+					url: "Contenido/MouseYTeclado.html",
+					type: "post",
+					//data: $("#formdatoprincipal").serialize(),
+					success:  function (response) { //una vez que el archivo recibe el request lo procesa y lo devuelve
+                        $("#contenido_principal").html(response);
+                }
+			});
+			$('#centro').css('height', '750px');
+		});
+
+		var eventos;
+		$('#monitores').click(function(){
+			$.ajax({
+					url: "Contenido/Monitores.html",
+					type: "post",
+					//data: $("#formdatoprincipal").serialize(),
+					success:  function (response) { //una vez que el archivo recibe el request lo procesa y lo devuelve
+                        $("#contenido_principal").html(response);
+                }
+			});
+			$('#centro').css('height', '750px');
+		});
+
+		var eventos;
+		$('#case').click(function(){
+			$.ajax({
+					url: "Contenido/Case.html",
+					type: "post",
+					//data: $("#formdatoprincipal").serialize(),
+					success:  function (response) { //una vez que el archivo recibe el request lo procesa y lo devuelve
+                        $("#contenido_principal").html(response);
+                }
+			});
+			$('#centro').css('height', '750px');
+		});
+		
+		var eventos;
+		$('#fuentedepoder').click(function(){
+			$.ajax({
+					url: "Contenido/FuenteDePoder.html",
+					type: "post",
+					//data: $("#formdatoprincipal").serialize(),
+					success:  function (response) { //una vez que el archivo recibe el request lo procesa y lo devuelve
+                        $("#contenido_principal").html(response);
+                }
+			});
+			$('#centro').css('height', '750px');
+		});
+		
+		
+		
+	</script>
+	</body>
+</html>

@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+h1{
+	margin-top: 5px;
+	margin-bottom: 0px;
+}
+h3{
+	margin-top: 0px;
+}
+
+li{
+	list-style: none;
+	font-size: 24px;
+	border-radius: 10px;
+	background-color: rgba(48, 48, 252, 0.116);
+	margin: 5px 2px 0px -10px;
+	text-decoration: none;
+	padding: 3px 3px 3px 7px;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+.icono{
+	width: 40px;
+	height: 40px;
+}
+
+.cabecera{
+	border : solid 1px;
+	border-color: red;
+	width: 100%;
+	height: 80px;
+	text-align: center;
+	margin-top: 30px;
+	border-radius: 5px;
+	
+}
+.contacto{
+	border: solid 1px;
+	border-color: orange;
+	width: 100%;
+	height: 80px;
+	display: flex;
+	border-radius: 5px;
+	
+}
+.contacto1{
+	border: solid 1px;
+	border-color: purple;
+	width: 33%;
+	height: 40px;
+	float: left;
+	margin: 15px 50px 15px 50px;	
+	padding: 5px 5px 5px 100px;
+	text-align: center;
+	display: flex;
+	border-radius: 10px;
+}
+
+.contacto2{
+	
+	text-align: center;
+	padding-top: 10px;
+	padding-left: 7px;
+}
+.contacto21{
+	
+	text-align: center;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+.contacto22{
+	
+	text-align: center;
+	padding-top: 10px;
+	padding-left: 30px;
+}
+.centro{
+
+	width: 100%;
+	height: 550px;
+	display: flex;
+	background: #F48D8F;
+}
+.menu{
+	width: 20%;
+	height: 410px;
+	float: left;
+	background: white;
+}
+.contenido_principal{
+	width: 75%;
+	height: 500px;
+	float: left;
+	background: white;
+}
+
+.marg1{
+	margin: 10px 10px 7px 15px
+}
+.pie_de_pagina{
+	border : solid 1px;
+	border-color: yellow;
+	width: 100%;
+	height: 40px;
+	background: #FFFF00;
+	
+}
